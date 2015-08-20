@@ -1,42 +1,46 @@
 class Complement
 
 #takes dna and makes rna complement
+  DNA = { 'G' => 'C',
+          'T' => 'A',
+          'C' => 'G',
+          'A' => 'U',
+        }
+
+  RNA = {'G' => 'C',
+         'A' => 'T',
+         'C' => 'G',
+         'U' => 'A',
+        }
 
   def self.of_dna(strands)
-    strands.chars.map do |n|
-      case
-        when n == 'G'
-           'C'
-        when n == 'T'
-           'A'
-        when n == 'C'
-           'G'
-        when n == 'A'
-           'U'
-        else
-          raise ArgumentError
-      end
+    compliments = strands.chars.map do |n|
+      DNA.select do |dna|
+        n == dna
+      end.values
     end.join
 
+    if compliments.size == strands.size
+      compliments
+    else
+      raise ArgumentError
+    end
   end
 
 #takes rna and makes dna complement
 
   def self.of_rna(strands)
-    strands.chars.map do |n|
-      case
-        when n == 'G'
-           'C'
-        when n == 'A'
-           'T'
-        when n == 'C'
-           'G'
-        when n == 'U'
-           'A'
-        else
-          raise ArgumentError
-      end
+    compliments = strands.chars.map do |n|
+      RNA.select do |rna|
+        n == rna
+      end.values
     end.join
+
+    if compliments.size == strands.size
+      compliments
+    else
+      raise ArgumentError
+    end
   end
 
 end
