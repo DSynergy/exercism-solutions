@@ -4,13 +4,9 @@ class Robot
   def name
     @robot_name ||= begin
       @robot_name = []
-      2.times do
-        robot_name << ('A'..'Z').to_a.sample
-      end
-      3.times do
-        robot_name << (0..9).to_a.sample
-      end
-      robot_name.join('')
+      robot_name << ('A'..'Z').to_a.sample(2)
+      robot_name << (0..9).to_a.sample(3)
+      robot_name.join
     end
   end
 
