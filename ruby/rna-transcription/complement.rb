@@ -1,5 +1,4 @@
 class Complement
-
 #takes dna and makes rna complement
   COMPLEMENTS = { 'G' => 'C',
                  'T' => 'A',
