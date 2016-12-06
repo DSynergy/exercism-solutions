@@ -12,22 +12,30 @@ rescue LoadError => e
   exit 1
 end
 
-# Test data version:
-# 7668b09 Added hello world test definition
-
 class HelloWorldTest < Minitest::Test
   def test_no_name
-    assert_equal 'Hello, World!', HelloWorld.hello
+    assert_equal 'Hello, World!', HelloWorld.hello, <<-MSG
+    When given no name, it should greet the world!
+    MSG
   end
 
   def test_sample_name
-    skip
-    assert_equal 'Hello, Alice!', HelloWorld.hello('Alice')
+    assert_equal 'Hello, Alice!', HelloWorld.hello('Alice'), <<-MSG
+    When given "Alice" it should greet Alice!
+    MSG
   end
 
   def test_other_sample_name
-    skip
-    assert_equal 'Hello, Bob!', HelloWorld.hello('Bob')
+    assert_equal 'Hello, Bob!', HelloWorld.hello('Bob'), <<-MSG
+    When given "Bob" it should greet Bob!
+    MSG
+  end
+
+  def test_no_strange_name
+    assert_equal 'Hello, !', HelloWorld.hello(''), <<-MSG
+    When given an empty string it should have a space
+    and punctuation, though admittedly this is strange.
+    MSG
   end
 end
 

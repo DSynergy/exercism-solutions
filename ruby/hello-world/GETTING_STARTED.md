@@ -48,9 +48,9 @@ On OS X and Linux, the error will be something like:
     HelloWorldTest#test_no_name:
     NameError: uninitialized constant HelloWorldTest::HelloWorld
       hello-world/hello_world_test.rb:20:in `test_no_name'
-    
+
     3 runs, 0 assertions, 0 failures, 1 errors, 2 skips
-    
+
     You have skipped tests. Run with --verbose for details.
 
 Within the first test, we are referencing a constant named `HelloWorld` when
@@ -148,4 +148,3 @@ When everything is passing, you can submit your code with the following
 command:
 
     $ exercism submit hello_world.rb
-
