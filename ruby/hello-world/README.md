@@ -30,7 +30,7 @@ It will also provide you with a safety net to explore other solutions without br
 2. Write some code to fix the test you picked.
 3. Re-run the tests to confirm the test is now passing.
 4. Repeat from step 1.
-5. [Submit your solution](http://help.exercism.io/submitting-exercises.html).
+5. Submit your solution (`exercism submit /path/to/file`)
 
 ## Instructions
 
@@ -41,7 +41,7 @@ It's important to remember that the goal is to make code as expressive and reada
 * * * *
 
 For installation and learning resources, refer to the
-[exercism help page](http://help.exercism.io/getting-started-with-ruby.html).
+[exercism help page](http://exercism.io/languages/ruby).
 
 For running the tests provided, you will need the Minitest gem. Open a
 terminal window and run the following command to install minitest:
@@ -49,7 +49,7 @@ terminal window and run the following command to install minitest:
     gem install minitest
 
 If you would like color output, you can `require 'minitest/pride'` in
-the test file, or note the alternative instruction, below, for runnng
+the test file, or note the alternative instruction, below, for running
 the test file.
 
 In order to run the test, you can run the test file from the exercise

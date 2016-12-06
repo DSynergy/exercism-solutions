@@ -8,16 +8,18 @@ The first time you boot them up, a random name is generated, such as
 RX837 or BC811.
 
 Every once in a while we need to reset a robot to its factory settings,
-which means that their name gets wiped. The next time you ask, it gets a
-new name.
+which means that their name gets wiped. The next time you ask, it will
+respond with a new random name.
 
-Random names means a risk of collisions. In some exercism language
+The names must be random: they should not follow a predictable sequence.
+Random names means a risk of collisions. Your solution should not allow
+the use of the same name twice when avoidable. In some exercism language
 tracks there are tests to ensure that the same name is never used twice.
 
 * * * *
 
 For installation and learning resources, refer to the
-[exercism help page](http://help.exercism.io/getting-started-with-ruby.html).
+[exercism help page](http://exercism.io/languages/ruby).
 
 For running the tests provided, you will need the Minitest gem. Open a
 terminal window and run the following command to install minitest:
@@ -25,7 +27,7 @@ terminal window and run the following command to install minitest:
     gem install minitest
 
 If you would like color output, you can `require 'minitest/pride'` in
-the test file, or note the alternative instruction, below, for runnng
+the test file, or note the alternative instruction, below, for running
 the test file.
 
 In order to run the test, you can run the test file from the exercise
